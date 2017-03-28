@@ -29,12 +29,18 @@ namespace _08.Traveling_At_Light_Speed
             decimal ly = decimal.Parse(Console.ReadLine());
             decimal lyInKm = 9450000000000;
             decimal lSpeedSec = 300000;
-            decimal total = (lyInKm / lSpeedSec) * ly;
-            decimal weeks = total / 60 / 60 / 24 / 7;
-            decimal day = total / 60 / 60 / 24 % 7;
-            decimal Hours = total / 60 / 60 % 24;
-            decimal Minutes = total / 60 % 60;
-            decimal Seconds = total % 60;
+            decimal kilometers = 9450000000000 * ly;
+            decimal Seconds = kilometers/300000;
+
+            decimal Minutes = Seconds / 60;
+            Seconds %= 60;
+            decimal Hours = Minutes/60;
+            Minutes %= 60;
+            decimal day = Hours/24;
+            Hours %= 24;
+            decimal weeks = day/7;
+            day %= 7;
+                       
             Console.WriteLine("{0} weeks", Math.Floor(weeks));
             Console.WriteLine("{0} days", Math.Floor(day));
             Console.WriteLine("{0} hours", Math.Floor(Hours));

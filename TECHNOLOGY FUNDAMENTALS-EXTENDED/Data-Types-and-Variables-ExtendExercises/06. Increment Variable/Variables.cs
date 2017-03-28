@@ -15,13 +15,15 @@ namespace _06.Increment_Variable
             int variable = int.Parse(Console.ReadLine());
             int overflow = 0;
             byte nums = 0;
-            for (int i = 0; i <variable; i++)
+         //   Console.WriteLine(variable%256);
+          //  Console.WriteLine( variable / 256);
+            for (int i = 0; i < variable; i++)
             {
-                nums +=1; // nums++;
+                nums += 1; // nums++;
                 if (nums == 0) overflow += 1;// overflow++;
             }
             if (overflow == 0) Console.WriteLine(nums);
-            else 
+            else
             {
                 Console.WriteLine(nums);
                 Console.WriteLine("Overflowed {0} times", overflow);
