@@ -16,9 +16,6 @@ namespace _04.RotateArrayOfStrings
             for (int i = 0; i < rotatedArr.Length-1; i++)
             {
                 rotatedArr[i + 1] = stringArr[i];
-             //   if (stringArr[i] = 0) stringArr[0] = rotatedArr[rotatedArr.Length - 1];
-                 stringArr[i] = rotatedArr[i + 1];
-
                 var lastElement = stringArr[rotatedArr.Length - 1];
 
                 rotatedArr[0] = lastElement;
