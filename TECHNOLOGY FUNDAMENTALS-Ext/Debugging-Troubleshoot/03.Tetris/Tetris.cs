@@ -92,7 +92,6 @@ namespace _03.Tetris
             {
                 Console.WriteLine(new string('*', n * 3));
             }
-           // n--;
             for (int i = 0; i < n; i++)
             {
                 Console.WriteLine(new string('.', n) + new string('*', n) + new string('.', n));

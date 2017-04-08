@@ -17,15 +17,15 @@ namespace _9.Altitude
         {
             string[] altitudeChanges = Console.ReadLine().Split(' ').ToArray();
             double currentAltitude = double.Parse(altitudeChanges[0]);
-            for (int i = 1, j = 2; i < altitudeChanges.Length; i++, j++)
+            for (int i = 1; i < altitudeChanges.Length; i++)
             {
                 if (altitudeChanges[i].Contains("up"))
                 {
-                    currentAltitude += double.Parse(altitudeChanges[j]);
+                    currentAltitude += double.Parse(altitudeChanges[i+1]);
                 }
                 else if (altitudeChanges[i].Contains("down"))
                 {
-                    currentAltitude -= double.Parse(altitudeChanges[j]);
+                    currentAltitude -= double.Parse(altitudeChanges[i+1]);
                     if (currentAltitude <= 0)
                     {
                         Console.WriteLine("crashed");
