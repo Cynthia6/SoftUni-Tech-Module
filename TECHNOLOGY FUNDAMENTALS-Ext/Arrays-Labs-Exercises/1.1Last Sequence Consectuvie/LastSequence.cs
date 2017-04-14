@@ -13,7 +13,7 @@ namespace _1._1Last_Sequence_Consectuvie
             var words = Console.ReadLine().Split().ToArray();
             string lastThree = string.Empty;
             int i = 1;
-                while(i < words.Length-1)
+                while(i <= words.Length-1)
                 {
                     if (words[i] == words[i + 1] && words[i] == words[i-1] ) lastThree = words[i] + ' ' + words[i + 1] + ' ' + words[i -1];
                     i++;
