@@ -13,9 +13,10 @@ namespace _1.RemoveElementsAtOddPositions
         {
             var nums = Console.ReadLine().Split(' ').ToList();
 
-            for (int i = 0; i < nums.Count; i++)
+            for (int i = 0; i < nums.Count; i++)//+=2
             {
                 nums.RemoveAt(i);
+                //i--;
             }
             Console.WriteLine(string.Join("", nums));
 
