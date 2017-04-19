@@ -18,13 +18,11 @@ namespace _05.SortArrayUsingInsertion
 
                 while (j > 0)
                 {
-                    int current = numbers[j - 1];
-                    int next = numbers[j];
-
-                    if (next < current)
+                    if(numbers[j] < numbers[j-1])
                     {
-                        numbers[j] = current;
-                        numbers[j - 1] = next;
+                        var temp = numbers[j];
+                        numbers[j] = numbers[j - 1];
+                        numbers[j - 1] = temp;
                     }
 
                     j--;

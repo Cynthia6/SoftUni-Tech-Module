@@ -12,16 +12,31 @@ namespace _06.Insertion_Sort_Using_List
         public static void Main()
         {
             var numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
+            var resultList = new List<int>();
 
             for (int i = 0; i < numbers.Count; i++)
             {
                 var inserted = false;
-                var currentElement = arr[i];
+                var currentElement = numbers[i];
                 for (int listIndex = 0; listIndex < resultList.Count; listIndex++)
                 {
+                    var currentListElement = resultList[listIndex];
+                    if (currentElement <= currentListElement)
+                    {
+                        inserted = true;
+                        resultList.Insert(Math.Max(0, listIndex), currentElement);
+                        break;
+                    }
+                }
+
+                if (!inserted)
+                {
+                    resultList.Add(currentElement);
+                }
+            }
 
 
-                    Console.WriteLine(string.Join(" ", numbers));
+            Console.WriteLine(string.Join(" ", resultList));
         }
     }
 }
