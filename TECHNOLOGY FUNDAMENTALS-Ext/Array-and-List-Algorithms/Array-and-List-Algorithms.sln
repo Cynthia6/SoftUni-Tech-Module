@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Insertion Sort Using Lis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Largest N Elements", "07. Largest N Elements\07. Largest N Elements.csproj", "{72877BFF-A2B1-4F4B-B837-9FA5E09828FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.Shoot List Elements", "1.Shoot List Elements\1.Shoot List Elements.csproj", "{6910E2AA-5E43-4445-B977-AD1A73BD4FEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. AverageCharacterDelimiter", "2. AverageCharacterDelimiter\2. AverageCharacterDelimiter.csproj", "{ACE97295-425F-44A8-91ED-288D94ECE855}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{72877BFF-A2B1-4F4B-B837-9FA5E09828FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72877BFF-A2B1-4F4B-B837-9FA5E09828FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72877BFF-A2B1-4F4B-B837-9FA5E09828FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6910E2AA-5E43-4445-B977-AD1A73BD4FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6910E2AA-5E43-4445-B977-AD1A73BD4FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6910E2AA-5E43-4445-B977-AD1A73BD4FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6910E2AA-5E43-4445-B977-AD1A73BD4FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE97295-425F-44A8-91ED-288D94ECE855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE97295-425F-44A8-91ED-288D94ECE855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE97295-425F-44A8-91ED-288D94ECE855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE97295-425F-44A8-91ED-288D94ECE855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
