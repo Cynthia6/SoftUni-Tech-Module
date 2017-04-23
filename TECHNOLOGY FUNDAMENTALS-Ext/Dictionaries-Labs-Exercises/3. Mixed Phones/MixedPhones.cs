@@ -20,10 +20,8 @@ namespace _3.Mixed_Phones
 
             while (input != "Over")
             {
-                var tokens = input.Split(new[] { ' ', ':' }, StringSplitOptions.RemoveEmptyEntries);
-
-
-
+                var tokens = input.Split(new[] { ' ', ':' }, StringSplitOptions.RemoveEmptyEntries).ToArray(); //.Split(": ".ToCharArray) same as new char[]{' ', ' :'}
+                
                 if (!IsNumber(tokens[0]) && IsNumber(tokens[1]))
                 {
                     phonebook[tokens[0]] = double.Parse(tokens[1]);
@@ -32,7 +30,6 @@ namespace _3.Mixed_Phones
                 {
                     phonebook[tokens[1]] = double.Parse(tokens[0]);
                 }
-
 
                 input = Console.ReadLine();
             }

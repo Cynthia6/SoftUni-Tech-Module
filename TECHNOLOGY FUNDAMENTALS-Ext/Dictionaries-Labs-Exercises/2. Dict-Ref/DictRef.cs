@@ -28,9 +28,9 @@ namespace _2.Dict_Ref
                 var inputData = input.Split();
                 var name = inputData[0];
                 var lastElement = inputData[inputData.Length - 1];
-
-                bool isNumber = lastElement.All(char.IsDigit);
-                if (isNumber)
+                var number = 0;
+                if(int.TryParse(lastElement, out number))
+            //    bool isNumber = lastElement.All(char.IsDigit);
                 {
                     dictionary[name] = int.Parse(lastElement);
                 }

@@ -57,26 +57,23 @@ namespace _6.Filter_Base
                 {
                     if (!ageDictionary.ContainsKey(name))
                     {
-                        ageDictionary[name] = 0;
+                        ageDictionary[name] = age;
                     }
-                    ageDictionary[name] = age;
-                }
+                 }
                 else if (double.TryParse(tokens[1], out salary))
                 {
                     if (!salaryDictionary.ContainsKey(name))
                     {
-                        salaryDictionary[name] = 0;
+                        salaryDictionary[name] = salary;
                     }
-                    salaryDictionary[name] = salary;
-                }
+                 }
                 else
                 {
                     if (!positionDictionary.ContainsKey(name))
                     {
-                        positionDictionary[name] = string.Empty;
+                        positionDictionary[name] = tokens[1];
                     }
-                    positionDictionary[name] = tokens[1];
-                }
+                 }
 
                 input = Console.ReadLine();
             }

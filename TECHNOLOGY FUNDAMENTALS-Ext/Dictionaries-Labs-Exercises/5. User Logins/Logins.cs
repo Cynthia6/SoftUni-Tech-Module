@@ -27,11 +27,8 @@ namespace _5.User_Logins
 
                 if (!logins.ContainsKey(username))
                 {
-                    logins[username] = string.Empty;
+                    logins[username] = password;
                 }
-
-                logins[username] = password;
-
                 input = Console.ReadLine();
             }
             //foreach (var item in logins)
