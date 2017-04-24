@@ -45,12 +45,16 @@ namespace _1.Shellbound
             }// end while
             foreach (var entry in register)
             {
-                var entryValues = entry.Value;
-                var sum = 0;
-                for (int i = 0; i < entryValues.Count; i++)
-                {
-                    sum += entryValues[i];
-                }
+               var entryValues = entry.Value;
+               // var sum = 0;
+               // foreach (var item in entryValues)
+               // {
+                    var sum = entryValues.Sum();
+               // }
+                //for (int i = 0; i < entryValues.Count; i++)
+                //{
+                //    sum += entryValues[i];
+                //}
                 var bigShell = 0;
                 if (entryValues.Count < 2)
                 {
@@ -61,7 +65,7 @@ namespace _1.Shellbound
                     bigShell = sum - (sum / entryValues.Count);
                 }
 
-                Console.WriteLine($"{entry.Key} -> {string.Join(", ", entryValues)} ({bigShell})");
+                Console.WriteLine($"{entry.Key} -> {string.Join(", ", entry.Value)} ({bigShell})");
             }
         }
     }

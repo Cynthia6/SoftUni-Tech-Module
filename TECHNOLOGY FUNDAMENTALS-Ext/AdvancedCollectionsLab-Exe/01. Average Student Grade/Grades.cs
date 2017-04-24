@@ -24,7 +24,7 @@ namespace _01.Average_Student_Grade
              }
             foreach (var kvp in studentsGrades)
             {
-                Console.WriteLine("{0} -> {1} (avg: {2:f2})", kvp.Key, string.Join(" ", kvp.Value.Select(p =>string.Format("{0:f2}", p))), kvp.Value.Average());
+                Console.WriteLine("{0} -> {1} (avg: {2:f2})", kvp.Key, string.Join(" ", kvp.Value.Select(x =>string.Format("{0:f2}", x))), kvp.Value.Average());
             }
         }
     }

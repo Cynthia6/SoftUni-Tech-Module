@@ -25,17 +25,17 @@ namespace _2.Dict_Ref_Advanced
             while (inputLine != "end")
             {
                 string[] inputData = inputLine.Split(new[] { ' ', '-', '>', ',' }, StringSplitOptions.RemoveEmptyEntries);
-                string currentKey = inputData[0];
+                string name = inputData[0];
                 var firstValue = -1;
                 if (int.TryParse(inputData[1], out firstValue))
                 {
-                    if (!dictionary.ContainsKey(currentKey))
+                    if (!dictionary.ContainsKey(name))
                     {
-                        dictionary[currentKey] = new List<int>();
+                        dictionary[name] = new List<int>();
                     }
                     for (int i = 1; i < inputData.Length; i++)
                     {
-                        dictionary[currentKey].Add(int.Parse(inputData[i]));
+                        dictionary[name].Add(int.Parse(inputData[i]));
                     }
                 }
                 else
@@ -43,7 +43,7 @@ namespace _2.Dict_Ref_Advanced
                     string otherKey = inputData[1];
                     if (dictionary.ContainsKey(otherKey))
                     {
-                        dictionary[currentKey] = new List<int>(dictionary[otherKey]);
+                        dictionary[name] = new List<int>(dictionary[otherKey]);
                     }
                 }
                 inputLine = Console.ReadLine();
