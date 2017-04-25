@@ -3,24 +3,73 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*  IT Researchers at the MIT (Massachusetts Institute of Technology) have discovered that, at certain (room) temperatures, the lambda expressions in their code are acting strange. In particular, a dancing behavior has been observed in them. The specialists choose to call this phenomenon – The Lambada expressions.
-You will be given several input lines in the following format:
-{selector} => {selectorObject}.{property}
-All elements of the input are strings. You need to store every lambada expression, as it is given.
-In some rare cases you will receive the input “dance”, which indicates that the lambada expressions are starting to dance. When that happens, you must COPY the selectorObject ONCE with a dot (“.”) between it., so that it becomes “{selectorObject}.{selectorObject}”
-in every lambada expression’s condition. 
-In other words, if you have “x => x.Value”, and you say “dance”, you should get “x => x.x.Value”.
-Check the examples for more info.
-If you meet a selectorObject which already, you must replace its property with the given new one.
-When you receive the command “lambada” you must end the input sequence. When that happens, you must print all lambada expressions./ */
 
 namespace _1.Lambada_Expressions
 {
-    class LambadaExp
+    public class LambadaExp
     {
-        static void Main(string[] args)
+        public static void Main()
         {
 
+            var inputLine = Console.ReadLine()
+                    .Split(new char[] { '=', '>', ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
+
+            var dict = new Dictionary<string, string>();
+
+            while (inputLine[0] != "lambada")
+            {
+                if (inputLine[0] != "dance")
+                {
+                    AddingItemsInDict(inputLine, dict);
+                }
+                else
+                {
+                    GetDanceCommand(dict);
+                }
+
+                inputLine = Console.ReadLine()
+                .Split(new char[] { '=', '>', ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .ToArray();
+            }
+
+            PrintResult(dict);
+        }
+
+        private static void PrintResult(Dictionary<string, string> dict)
+        {
+            foreach (var item in dict)
+            {
+                Console.WriteLine($"{item.Key} => {item.Value}");
+            }
+        }
+
+        private static void AddingItemsInDict(string[] inputLine, Dictionary<string, string> dict)
+        {
+            var key = inputLine[0];
+            var value = inputLine[1];
+
+            if (!dict.ContainsKey(key))
+            {
+                dict.Add(key, value);
+            }
+            else
+            {
+                dict[key] = value;
+            }
+        }
+
+        private static void GetDanceCommand(Dictionary<string, string> dict)
+        {
+            for (int i = 0; i < dict.Count; i++)
+            {
+                var key = dict.Keys.Skip(i).Take(1).ToList();
+                var value = dict.Values.Skip(i).Take(1).ToList();
+                dict[key[0]] = key[0] + "." + value[0];
+
+                key.Clear();
+                value.Clear();
+            }
         }
     }
 }
