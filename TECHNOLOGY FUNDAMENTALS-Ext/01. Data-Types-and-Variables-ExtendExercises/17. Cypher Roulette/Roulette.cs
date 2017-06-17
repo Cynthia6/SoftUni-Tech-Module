@@ -18,55 +18,43 @@ namespace _17.Cypher_Roulette
     {
         public static void Main()
         {
-            uint inputRows = uint.Parse(Console.ReadLine());
-
-            string cypherString = "", currString, prevString = "";
-            string concatMode = "NormalMode";
-
-            while (inputRows > 0)
+            
+            int totalLines = int.Parse(Console.ReadLine());
+            string result = "";
+            string previous = "";
+            int spinCounter = 1;
+            for (int i = 1; i <= totalLines; i++)
             {
-                currString = Console.ReadLine();
-
-                if (prevString == currString)
+                string current = Console.ReadLine();
+                if (current == previous)
                 {
-                    cypherString = string.Empty;
-
-                    if (prevString != "spin")
-                        inputRows--;
-
-                    continue;
+                    result = "";
+                    if (current == "spin")
+                        i--;
                 }
-
-                if (currString != "spin")
-                    inputRows--;
-
                 else
                 {
-                    if (concatMode == "SpinMode")
-                        concatMode = "NormalMode";
-
+                    if (current == "spin")
+                    {
+                        spinCounter++;
+                        i--;
+                    }
                     else
-                        concatMode = "SpinMode";
+                    {
+                        if (spinCounter % 2 != 0)
+                        {
+                            result += current;
+                        }
+                        else
+                        {
+                            result = current + result;
+                        }
+                    }
 
-                    prevString = currString;
-                    continue;
                 }
-
-                switch (concatMode)
-                {
-                    case ("NormalMode"):
-                        cypherString = cypherString + currString;
-                        break;
-
-                    case ("SpinMode"):
-                        cypherString = currString + cypherString;
-                        break;
-                }
-
-                prevString = currString;
-
+                previous = current;
             }
-            Console.WriteLine(cypherString);
+            Console.WriteLine(result);
         }
     }
 }

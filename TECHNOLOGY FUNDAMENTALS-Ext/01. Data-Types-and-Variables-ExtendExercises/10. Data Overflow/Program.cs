@@ -9,63 +9,117 @@ namespace _10.Data_Overflow
         public static void Main()
         {
 
+            ulong numberBig = ulong.Parse(Console.ReadLine());
+            ulong numberSmall = ulong.Parse(Console.ReadLine());
+            string typeBig = string.Empty;
+            string typeSmall = string.Empty;
+            ulong typeMaxValue = 0;
+            if (numberBig < numberSmall)
+            {
+                ulong temp = numberSmall;
+                numberSmall = numberBig;
+                numberBig = temp;
+            }
+          
+                if (byte.MinValue <= numberBig && numberBig <= byte.MaxValue)
+                {
+                    typeBig = "byte";
+                }
+                else if (ushort.MinValue <= numberBig && numberBig <= ushort.MaxValue)
+                {
+                    typeBig = "ushort";
+                }
+                else if (uint.MinValue <= numberBig && numberBig <= uint.MaxValue)
+                {
+                    typeBig = "uint";
+                }
+                else if (ulong.MinValue <= numberBig && numberBig <= ulong.MaxValue)
+                {
+                    typeBig = "ulong";
+                }
 
-            decimal number1 = decimal.Parse(Console.ReadLine());
-            decimal number2 = decimal.Parse(Console.ReadLine());
-            decimal temp = 0;
+                if (byte.MinValue <= numberSmall && numberSmall <= byte.MaxValue)
+                {
+                    typeSmall = "byte";
+                    typeMaxValue = byte.MaxValue;
 
-            if (number2 > number1)
-            {
-                temp = number1;
-                number1 = number2;
-                number2 = temp;
-            }
+                }
+                else if (ushort.MinValue <= numberSmall && numberSmall <= ushort.MaxValue)
+                {
+                    typeSmall = "ushort";
+                    typeMaxValue = ushort.MaxValue;
+                }
+                else if (uint.MinValue <= numberSmall && numberSmall <= uint.MaxValue)
+                {
+                    typeSmall = "uint";
+                    typeMaxValue = uint.MaxValue;
+                }
+                else if (ulong.MinValue <= numberSmall && numberSmall <= ulong.MaxValue)
+                {
+                    typeSmall = "ulong";
+                    typeMaxValue = ulong.MaxValue;
+                }
+                Console.WriteLine("bigger type: " + typeBig);
+                Console.WriteLine("smaller type: " + typeSmall);
+                Console.WriteLine($"{numberBig} can overflow {typeSmall} {Math.Round((double)numberBig / typeMaxValue)} times");
+            
 
-            //first number
-            if (byte.MinValue <= number1 && number1 <= byte.MaxValue)
-            {
-                Console.WriteLine("bigger type: byte");
-            }
-            else if (ushort.MinValue <= number1 && number1 <= ushort.MaxValue)
-            {
-                Console.WriteLine("bigger type: ushort");
-            }
-            else if (uint.MinValue <= number1 && number1 <= uint.MaxValue)
-            {
-                Console.WriteLine("bigger type: uint");
-            }
-            else
-                Console.WriteLine("bigger type: ulong");
+            //decimal number1 = decimal.Parse(Console.ReadLine());
+            //decimal number2 = decimal.Parse(Console.ReadLine());
+            //decimal temp = 0;
 
-            //second number and calculating number of overflows
-            if (byte.MinValue <= number2 && number2 <= byte.MaxValue)
-            {
-                Console.WriteLine("smaller type: byte");
-                Console.WriteLine("{0} can overflow byte {1} times",
-                    number1,
-                    Math.Round(number1 / byte.MaxValue));
-            }
-            else if (ushort.MinValue <= number2 && number2 <= ushort.MaxValue)
-            {
-                Console.WriteLine("smaller type: ushort");
-                Console.WriteLine("{0} can overflow ushort {1} times",
-                    number1,
-                    Math.Round(number1 / ushort.MaxValue));
-            }
-            else if (uint.MinValue <= number2 && number2 <= uint.MaxValue)
-            {
-                Console.WriteLine("smaller type: uint");
-                Console.WriteLine("{0} can overflow uint {1} times",
-                    number1,
-                    Math.Round(number1 / uint.MaxValue));
-            }
-            else
-            {
-                Console.WriteLine("smaller type: ulong");
-                Console.WriteLine("{0} can overflow ulong {1} times",
-                    number1,
-                    Math.Round(number1 / ulong.MaxValue));
-            }
+            //if (number2 > number1)
+            //{
+            //    temp = number1;
+            //    number1 = number2;
+            //    number2 = temp;
+            //}
+
+            ////first number
+            //if (byte.MinValue <= number1 && number1 <= byte.MaxValue)
+            //{
+            //    Console.WriteLine("bigger type: byte");
+            //}
+            //else if (ushort.MinValue <= number1 && number1 <= ushort.MaxValue)
+            //{
+            //    Console.WriteLine("bigger type: ushort");
+            //}
+            //else if (uint.MinValue <= number1 && number1 <= uint.MaxValue)
+            //{
+            //    Console.WriteLine("bigger type: uint");
+            //}
+            //else
+            //    Console.WriteLine("bigger type: ulong");
+
+            ////second number and calculating number of overflows
+            //if (byte.MinValue <= number2 && number2 <= byte.MaxValue)
+            //{
+            //    Console.WriteLine("smaller type: byte");
+            //    Console.WriteLine("{0} can overflow byte {1} times",
+            //        number1,
+            //        Math.Round(number1 / byte.MaxValue));
+            //}
+            //else if (ushort.MinValue <= number2 && number2 <= ushort.MaxValue)
+            //{
+            //    Console.WriteLine("smaller type: ushort");
+            //    Console.WriteLine("{0} can overflow ushort {1} times",
+            //        number1,
+            //        Math.Round(number1 / ushort.MaxValue));
+            //}
+            //else if (uint.MinValue <= number2 && number2 <= uint.MaxValue)
+            //{
+            //    Console.WriteLine("smaller type: uint");
+            //    Console.WriteLine("{0} can overflow uint {1} times",
+            //        number1,
+            //        Math.Round(number1 / uint.MaxValue));
+            //}
+            //else
+            //{
+            //    Console.WriteLine("smaller type: ulong");
+            //    Console.WriteLine("{0} can overflow ulong {1} times",
+            //        number1,
+            //        Math.Round(number1 / ulong.MaxValue));
+            //}
 
             //ulong firstNum = ulong.Parse(Console.ReadLine());
             //ulong secondNum = ulong.Parse(Console.ReadLine());
