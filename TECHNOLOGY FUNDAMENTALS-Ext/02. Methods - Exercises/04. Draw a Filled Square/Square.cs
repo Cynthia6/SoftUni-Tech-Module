@@ -13,7 +13,7 @@ namespace _04.Draw_a_Filled_Square
         {
             int n = int.Parse(Console.ReadLine());
             Console.WriteLine(new string('-', n*2));
-            for (int rows = 0; rows <n-2; rows++)
+            for (int rows = 0; rows < n-2; rows++)
             {
                 PrintLines(n);
             }

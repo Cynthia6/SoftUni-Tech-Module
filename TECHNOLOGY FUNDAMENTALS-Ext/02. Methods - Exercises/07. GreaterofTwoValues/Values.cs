@@ -31,6 +31,7 @@ namespace _07.GreaterofTwoValues
                 string max = StringMax(first, second);
                 Console.WriteLine(max);
 
+
             }
         }
     
@@ -46,9 +47,11 @@ namespace _07.GreaterofTwoValues
         }
         public static string StringMax(string a, string b)
         {
-            if (a.CompareTo(b) >= 0) return a;
+            if (a.CompareTo(b) >= 0) return a; //returns number 1>0 if bigger
             else return b;
+
         }
         }
+
     }
 

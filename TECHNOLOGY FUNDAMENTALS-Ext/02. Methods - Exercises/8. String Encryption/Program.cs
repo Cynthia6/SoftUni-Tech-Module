@@ -33,7 +33,7 @@ namespace _8.String_Encryption
             lastDigit = symToInt % 10;
             string result = firstDigit + "" + lastDigit;
             symToInt += lastDigit;
-            result = (char)symToInt + "" + result;
+            result = (char)symToInt + result;
             symToInt = symToInt - lastDigit - firstDigit;
             result = result + "" + (char)symToInt;
             return result;

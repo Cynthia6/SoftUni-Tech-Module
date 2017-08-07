@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.Number to Words", "7.Numb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. String Encryption", "8. String Encryption\8. String Encryption.csproj", "{ED0EB71A-E701-4CA6-9614-684C44E0321E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercises", "exercises\exercises.csproj", "{040E150D-7033-4DAA-8B08-A92F92429C52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{ED0EB71A-E701-4CA6-9614-684C44E0321E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED0EB71A-E701-4CA6-9614-684C44E0321E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED0EB71A-E701-4CA6-9614-684C44E0321E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{040E150D-7033-4DAA-8B08-A92F92429C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040E150D-7033-4DAA-8B08-A92F92429C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040E150D-7033-4DAA-8B08-A92F92429C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040E150D-7033-4DAA-8B08-A92F92429C52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

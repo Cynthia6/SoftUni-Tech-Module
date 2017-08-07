@@ -7,11 +7,9 @@ namespace _3.String_Repeater
     {
         public static void Main()
         {
-            string input = 
-Console.ReadLine();
+            string input = Console.ReadLine();
 
-            int times = 
-int.Parse(Console.ReadLine());
+            int times = int.Parse(Console.ReadLine());
 
             Console.WriteLine(RepeatString(input,times));
         }
