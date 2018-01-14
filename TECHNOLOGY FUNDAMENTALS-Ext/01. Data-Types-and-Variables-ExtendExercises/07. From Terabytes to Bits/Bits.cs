@@ -7,12 +7,11 @@ namespace _07.From_Terabytes_to_Bits
     {
         public static void Main()
         {
-            var n = 
-decimal.Parse(Console.ReadLine());
+            var n = decimal.Parse(Console.ReadLine());
 
-         decimal terabytes = n * 1024 * 1024 * 1024 * 1024 * 8;
+         decimal bits = n * 1024 * 1024 * 1024 * 1024 * 8;
 
-            Console.WriteLine("{0:f0}",terabytes);
+            Console.WriteLine("{0:f0}",bits);
 
 
         }

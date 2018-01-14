@@ -9,11 +9,9 @@ namespace _03.Exchange_Variable_Values
         public static void Main()
         {
 
-            int a = 
-int.Parse(Console.ReadLine());
+            int a = int.Parse(Console.ReadLine());
 
-            int b = 
-int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
 
             //  Console.WriteLine($"Before: \na = {a} \nb = {b}");
             int temp = a;

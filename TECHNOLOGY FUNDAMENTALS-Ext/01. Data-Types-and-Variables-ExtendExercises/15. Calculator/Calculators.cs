@@ -12,39 +12,44 @@ namespace _15.Calculator
     {
         public static void Main()
         {
-            int number1 = int.Parse(Console.ReadLine());
-            char operatori = char.Parse(Console.ReadLine());
-            int number2 = int.Parse(Console.ReadLine());
 
-            decimal result = Calculator(number1, operatori, number2);
+            int operator1 = int.Parse(Console.ReadLine());
+            char operand = char.Parse(Console.ReadLine());
+            int operator2 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"{number1} {operatori} {number2} = {result}");
+           int result=  Calculator1(operator1, operand, operator2);
+
+            Console.WriteLine( $" {operator1} {operand} {operator2} = {result}");
+
+
+
         }
 
-        public static int Calculator(int number1, char operatori, int number2)
+        private static int Calculator1(int operator1, char operand, int operator2)
         {
             int result = 0;
-            switch (operatori)
+            switch (operand)
+               
             {
                 case '-':
-                    result = number1 - number2;
-                    break;
+                result = operator1 - operator2;
+                break;
                 case '+':
-                    result = number1 + number2;
-                    break;
+                result = operator1 + operator2;
+                break;
                 case '*':
-                    result = number1 * number2;
-                    break;
+                result = operator1 * operator2;
+                break;
                 case '/':
-                    result = number1 / number2;
-                    break;
+                result = operator1 / operator2;
+                break;
+
                 default:
-                    Console.WriteLine("Invalid");
+                    Console.WriteLine("error");
                     break;
             }
-
             return result;
-
         }
+        
     }
 }

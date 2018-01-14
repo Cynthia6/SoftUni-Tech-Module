@@ -15,11 +15,12 @@ namespace _16.Tricky_Strings
             string result = "";
             for (int i = 1; i <= n; i++)
             {
-                if (i != 1) result += delimiter;
+                
                 string words = Console.ReadLine();
                 result += words;
+                if (i != 5) result += delimiter;
             }
-        //    string removeLastChar = result.Remove(result.Length - delimiter.Length);
+        //  string removeLastChar = result.Remove(result.Length - delimiter.Length);
             Console.WriteLine(result);
         }
     }
