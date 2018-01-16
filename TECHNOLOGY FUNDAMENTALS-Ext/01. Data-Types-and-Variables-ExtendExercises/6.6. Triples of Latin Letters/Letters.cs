@@ -15,8 +15,10 @@ namespace _6._6.Triples_of_Latin_Letters
                         char letter1 = (char)('a' + i1);
                         char letter2 = (char)('a' + i2);
                         char letter3 = (char)('a' + i3);
-                        Console.WriteLine("{0}{1}{2}",
-                          letter1, letter2, letter3);
+                        var result = (char)(letter1 + letter2 + letter3);
+                        Console.WriteLine(  result);
+                    //    Console.WriteLine("{0}{1}{2}",
+                        //  letter1, letter2, letter3);
                     }
 
         }
