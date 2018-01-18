@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8.8. Volume of Pyramid", "8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9.9. Refactor Special Numbers", "9.9. Refactor Special Numbers\9.9. Refactor Special Numbers.csproj", "{52B24050-58A9-4D7E-A02B-4981820932EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercises", "exercises\exercises.csproj", "{5B605911-F203-49FE-9E49-0927CBF51167}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -195,6 +197,10 @@ Global
 		{52B24050-58A9-4D7E-A02B-4981820932EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52B24050-58A9-4D7E-A02B-4981820932EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52B24050-58A9-4D7E-A02B-4981820932EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B605911-F203-49FE-9E49-0927CBF51167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B605911-F203-49FE-9E49-0927CBF51167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B605911-F203-49FE-9E49-0927CBF51167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B605911-F203-49FE-9E49-0927CBF51167}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
