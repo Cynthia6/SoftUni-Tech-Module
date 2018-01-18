@@ -16,27 +16,24 @@ namespace _4.Nth_Digit
             Console.WriteLine(FindNthDigit(number,position));
 
         }
-        public static int FindNthDigit(int number, int position)
+        private static int FindNthDigit(int num, int indx)
         {
-            int digit = 0;
-            int count = 0;
-            while (number > 0)
+            int result = 0;
+            int currenti = 1;
+            while (num != 0)
             {
                
-                if (count == position)
+                if (currenti == indx)
                 {
-                    break;
+                    num = num % 10;
+                    result = num;
                 }
-                 else
-                {
-                    digit = number % 10;
-                    count++;
-                    number = number / 10;
-                }
-              
+                else
+                    num /= 10;
+                    currenti++;
+
             }
-            return digit;
-            
+            return result;
         }
     }
 }

@@ -26,9 +26,9 @@ namespace _5.Integer_to_Base
             string result = "";
             while (number > 0)
             {
-                var remainder = number % numbase;//2
-                result = remainder + result;//2
-                number = number / numbase;//1
+                var remainder = number % numbase;
+                result = remainder + result;
+                number = number / numbase;
             }
 
             return result;
