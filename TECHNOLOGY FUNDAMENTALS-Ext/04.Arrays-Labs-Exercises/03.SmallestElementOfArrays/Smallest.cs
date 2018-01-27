@@ -7,7 +7,7 @@ namespace _03.SmallestElementOfArrays
     {
         static void Main()
         {
-            var numsArr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var numsArr = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int currMin = int.MaxValue;
             for (int i = 0; i < numsArr.Length; i++)
             {

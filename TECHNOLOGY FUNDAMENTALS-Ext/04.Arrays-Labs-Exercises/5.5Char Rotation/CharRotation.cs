@@ -12,41 +12,52 @@ namespace _5._5Char_Rotation
     {
         public static void Main()
         {
-            var symbols = Console.ReadLine();
-            var numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            char[] charSymbols = symbols.ToCharArray();
+            var input = Console.ReadLine().ToArray();//char array
+        //    var input = Console.ReadLine().Split(' ').ToArray(); -- > STRING ARRAY
+            var nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
             string result = string.Empty;
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
-                if (numbers[i] % 2 == 0) charSymbols[i] -= (char)numbers[i]; 
-                else charSymbols[i] += (char)numbers[i];
-                result = result +  charSymbols[i];
+                if (nums[i] % 2 == 0) result = result + (char)(input[i] - nums[i]);
+                if (nums[i] % 2 != 0) result = result + (char)(input[i] + nums[i]);
+
             }
-
             Console.WriteLine(result);
-        //    string symbols = Console.ReadLine();
-        //    int[] numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            //var symbols = Console.ReadLine();
+            //var numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            //char[] charSymbols = symbols.ToCharArray();
+            //string result = string.Empty;
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    if (numbers[i] % 2 == 0) charSymbols[i] -= (char)numbers[i]; 
+            //    else charSymbols[i] += (char)numbers[i];
+            //    result = result +  charSymbols[i];
+            //}
 
-        //    Console.WriteLine(string.Join("", ModifyElementsInArray(symbols, numbers)));
-        //}
+            //Console.WriteLine(result);
+            //    string symbols = Console.ReadLine();
+            //    int[] numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-        //private static char[] ModifyElementsInArray(string symbols, int[] numbers)
-        //{
-        //    char[] modifiedElements = new char[symbols.Length];
+            //    Console.WriteLine(string.Join("", ModifyElementsInArray(symbols, numbers)));
+            //}
 
-        //    for (int i = 0; i < modifiedElements.Length; i++)
-        //    {
-        //        if (numbers[i] % 2 == 0)
-        //        {
-        //            modifiedElements[i] = (char)(symbols[i] - numbers[i]);
-        //        }
-        //        else
-        //        {
-        //            modifiedElements[i] = (char)(symbols[i] + numbers[i]);
-        //        }
-        //    }
+            //private static char[] ModifyElementsInArray(string symbols, int[] numbers)
+            //{
+            //    char[] modifiedElements = new char[symbols.Length];
 
-        //    return modifiedElements;
+            //    for (int i = 0; i < modifiedElements.Length; i++)
+            //    {
+            //        if (numbers[i] % 2 == 0)
+            //        {
+            //            modifiedElements[i] = (char)(symbols[i] - numbers[i]);
+            //        }
+            //        else
+            //        {
+            //            modifiedElements[i] = (char)(symbols[i] + numbers[i]);
+            //        }
+            //    }
+
+            //    return modifiedElements;
         }
     }
 }
