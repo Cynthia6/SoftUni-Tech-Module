@@ -11,25 +11,50 @@ namespace _12._0_Test_Numbers
     {
         static void Main()
         {
-            int N = int.Parse(Console.ReadLine());
-            int M = int.Parse(Console.ReadLine());
+
+            int n = int.Parse(Console.ReadLine());
+            int m = int.Parse(Console.ReadLine());
             int totalSum = int.Parse(Console.ReadLine());
             int sum = 0;
-            int counter = 0;
-            for (int i = N; i >= 1; i--)
+            int count = 0;
+
+            for (int i = n; i >= 1; i--)
             {
-                for (int j = 1; j <= M; j++)
+                for (int j = 1; j <= m; j++)
                 {
-                    sum += i * j * 3;
-                    counter++;
-                    if (sum >= totalSum)
+                    count++;
+                    sum += (j * i) * 3;
+                    if (totalSum <= sum)
                     {
-                        Console.WriteLine($"{counter} combinations\r\nSum: {sum} >= {totalSum}");
+                        Console.WriteLine($"{count} combinations\r\nSum: {sum} >= {totalSum}");
                         return;
+
                     }
                 }
             }
-            Console.WriteLine($"{counter} combinations\r\nSum: {sum}");
+                Console.WriteLine($"{count} combinations\r\nSum: {sum}");
+                
+
+
+                //    int N = int.Parse(Console.ReadLine());
+                //    int M = int.Parse(Console.ReadLine());
+                //    int totalSum = int.Parse(Console.ReadLine());
+                //    int sum = 0;
+                //    int counter = 0;
+                //    for (int i = N; i >= 1; i--)
+                //    {
+                //        for (int j = 1; j <= M; j++)
+                //        {
+                //            sum += i * j * 3;
+                //            counter++;
+                //            if (sum >= totalSum)
+                //            {
+                //                Console.WriteLine($"{counter} combinations\r\nSum: {sum} >= {totalSum}");
+                //                return;
+                //            }
+                //        }
+                //    }
+                //    Console.WriteLine($"{counter} combinations\r\nSum: {sum}");
+            }
         }
     }
-}

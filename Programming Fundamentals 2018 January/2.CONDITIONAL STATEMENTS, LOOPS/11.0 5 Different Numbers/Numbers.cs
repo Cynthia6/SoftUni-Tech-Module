@@ -12,7 +12,7 @@ namespace _11._0_5_Different_Numbers
             int first = int.Parse(Console.ReadLine());
             int second = int.Parse(Console.ReadLine());
 
-            if (first + 5 >= second)
+            if (first + 5 >= second)//second - first <= 5
             {
                 Console.WriteLine("No");
                 return;

@@ -7,24 +7,51 @@ namespace _13._0_Game_of_Numbers
     {
         static void Main()
         {
-            int N = int.Parse(Console.ReadLine());
-            int M = int.Parse(Console.ReadLine());
-            int magicNum = int.Parse(Console.ReadLine());
-            int counter = 0;
-            for (int i = M; i >=N; i--)
+
+            int first = int.Parse(Console.ReadLine());
+            int second = int.Parse(Console.ReadLine());
+            int magical = int.Parse(Console.ReadLine());
+            int result1 = 0;
+            int result2 = 0;
+            int count = 0;
+            for (int i = first; i <= second; i++)
             {
-                for (int j = M; j >= N; j--)
+                for (int j = first; j <= second; j++)
                 {
-                    if (i+j == magicNum)
+                    if (j + i == magical)
                     {
-                        Console.WriteLine($"Number found! {i} + {j} = {magicNum}");
-                        return;
+                        result1 = i;
+                        result2 = j;                        
                     }
-                    counter++;
+                    count++;
                 }
             }
+            if (result1 != 0 && result2 != 0)
+            {
+                Console.WriteLine($"Number found! {result1} + {result2} = {magical}");
+            }
+            else
+                Console.WriteLine($"{count} combinations - neither equals {magical}");
             
-            Console.WriteLine($"{counter} combinations - neither equals {magicNum}");
+            //    int N = int.Parse(Console.ReadLine());
+            //    int M = int.Parse(Console.ReadLine());
+            //    int magicNum = int.Parse(Console.ReadLine());
+            //    int counter = 0;
+            //    for (int i = M; i >=N; i--)
+            //    {
+            //        for (int j = M; j >= N; j--)
+            //        {
+            //            if (i+j == magicNum)
+            //            {
+            //                Console.WriteLine($"Number found! {i} + {j} = {magicNum}");
+            //                return;
+            //            }
+            //            counter++;
+            //        }
+            //    }
+
+            //    Console.WriteLine($"{counter} combinations - neither equals {magicNum}");
+            //}
         }
     }
 }
